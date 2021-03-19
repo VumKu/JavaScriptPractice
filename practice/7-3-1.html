@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="myClass">問世間，</p>
+    <p class="myClass">情是何物，</p>
+    <p class="myClass">直教生死相許。</p>
+
+    <script>
+        // 只回傳第一個P
+        let p = document.querySelectorAll('p.myClass')
+
+        p[0].style.background = "#0099cc"
+        p[1].innerHTML = "<span style = 'font-size: 24px'>情是何物，</span>"
+        p[2].style.background = "#0099ff"
+        p[2].style.color = "#ccc"
+    </script>
+</body>
+
+</html>

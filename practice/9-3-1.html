@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>講義P.84</title>
+</head>
+
+<body>
+
+    <script>
+        let obj = {
+            fname: 'Darren',
+            lname: 'Yang',
+            age: null,
+            lineId: 'telunyang'
+        };
+
+        for (let attr in obj) {
+            console.log(attr)
+        }
+
+        for (let key in obj) {
+            console.log(key)
+        }
+        // "物件"中沒有序(key)，所以他還是只會印出屬性
+
+        // for (let value of obj) {
+        //     console.log(value)
+        // }
+        // 在物件當中無法使用value，"物件"內沒有陣列可以來取得相對應的值，所以會報錯。
+        // of是用在有順序0.1.2...的，物件沒有這個概念
+
+
+        let arr = ['a', 'b', 'c'];
+
+        for (let value of arr) {
+            console.log(value)
+        }
+        // value 用 of ；attr、key用in
+
+        for (let key in arr) {
+            console.log(key)
+        }
+        // 印出陣列中的序(key)
+    </script>
+</body>
+
+</html>
