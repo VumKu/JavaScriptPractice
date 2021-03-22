@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 有一個Person這樣的類別
+        var Person = function (firstName) {
+            this.firstName = firstName
+        }
+
+        // 改變類別要用prototype去改變(person的原型)
+        Person.prototype.sayHello = function () {
+            console.log("Hello I'm " + this.firstName)
+        }
+
+        var person01 = new Person('alex');
+        var person02 = new Person('bill');
+
+        console.log(person01.firstName);
+        person02.sayHello();
+    </script>
+</body>
+
+</html>

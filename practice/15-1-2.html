@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let date = new Date();
+        let year, month, day, hour, minute, second;
+
+        // 年
+        year = date.getFullYear();
+
+        // 月，月份數字小於10，就前面加上一個0，後面以此類推
+        month = date.getMonth() + 1;
+
+        if (date.getMonth() + 1 < 10) {
+            month = '0' + (date.getMonth() + 1);
+        }
+        else {
+            month = date.getMonth() + 1;
+        }
+
+        // 日
+        day = date.getDate();
+
+        if (date.getDate() < 10) {
+            day = '0' + date.getDate();
+        }
+        else {
+            day = date.getDate();
+        }
+
+        // 時
+        hour = date.getHours();
+
+        if (date.getHours() < 10) {
+            hour = '0' + date.getHours();
+        }
+        else {
+            hour = date.getHours();
+        }
+
+        // 分
+        if (date.getMinutes() < 10) {
+            minute = '0' + date.getMinutes();
+        } else {
+            minute = date.getMinutes();
+        };
+
+        // 秒
+        if (date.getSeconds() < 10) {
+            second = '0' + date.getSeconds();
+        } else {
+            second = date.getSeconds();
+        };
+
+
+        console.log(`${year}-${month}-${day} ${hour}:${minute}:${second}`)
+
+    </script>
+</body>
+
+</html>
