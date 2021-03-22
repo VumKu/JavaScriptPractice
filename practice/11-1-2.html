@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = `{
+        "firstName": "Darren",
+        "lastName": "Yang",
+        "gender": "male",
+        "age": 18,
+        "address": {
+            "streetAddress": "台北市復興南路一段390號2樓、3樓",
+            "city": "Taipei"
+        },
+        "phoneNumber": [
+            {
+                "type": "office",
+                "number": "6631-6666"
+            },
+            {
+                "type": "fax",
+                "number": "6631-6598"
+            }
+        ]
+    }`;
+
+        // 讓str由字串轉為物件。
+        let obj = JSON.parse(str);
+        console.log(obj['firstname']);
+        // 取出address裡面的streetAddress。
+        console.log(obj["address"]["streetAddress"]);
+
+        //將 obj 物件屬性 phoneNumber 當中的陣列資料（裡面是物件）逐一列出
+        for (let o of obj['phoneNumber']) {
+            console.log('=============');
+            console.log(o['type']);
+            console.log(o['number']);
+        }
+
+
+    </script>
+</body>
+
+</html>

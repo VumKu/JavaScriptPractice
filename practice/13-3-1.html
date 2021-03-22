@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 雙重func，你在外func定義的let strName，內部的func一樣可以收到定義
+        function text() {
+            let strName = 'Candy'
+            function displayName() {
+                console.log(strName)
+            }
+            displayName();
+        }
+
+        // console.log('strName');
+        // 想要印出strName，但它有let在前面(只會在func裡面作用)，前面有說可以去掉let變成全域變數，但通常不太好，所以用雙重func來呼叫出strName
+
+        text();
+    </script>
+</body>
+
+</html>
