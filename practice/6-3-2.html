@@ -15,13 +15,16 @@
         let myStr = "Tang Poem: 年年歲歲花相似，歲歲年年人不同。";
 
         console.log(myStr.substr(9, 5))
-        // 含自己本身的後五個
+        // 開頭第一字是0，從第9個算開始，含自己本身的後五個
 
         console.log(myStr.substring(9, 13));
-        // 從9開始、第13結束
+        // 開頭第一字是0，從第10開始、第13結束
 
         console.log(myStr.indexOf("年"));
+        // 開頭第一字是0，會印出11
+
         console.log(myStr.replace('花', '草'));
+        // 把花置換成草
 
     </script>
 </body>
