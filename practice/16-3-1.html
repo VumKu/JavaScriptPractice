@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 1px solid red;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgb(25, 40, 128);
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap" id="wrap"></div>
+    <div class="circle" id="circle"></div>
+
+    <script>
+        let radius = 250;
+        let circle = document.getElementById('circle');
+        let degree = 0;
+        let circleNum = 6;
+        let moveLength = 360 / circleNum;
+
+        let t;
+
+        t = setInterval(() => {
+            draw();
+        }, 500);
+
+        function draw() {
+            if (degree + moveLength >= 360) {
+                clearInterval(t);
+            }
+
+            degree += moveLength;
+
+            let wrap_left = wrap.offsetLeft;
+            let wrap_top = wrap.offsetTop;
+
+            // 弧度 radian = degree * Math.PI / 180;
+            // 弧長 = 弧度 * 半徑
+            let x = Math.cos(degree * (Math.PI / 180)) * radius;
+
+            circle.style.left = (wrap_left + radius + x) + 'px';
+
+            let y = Math.sin(degree * (Math.PI / 180)) * radius;
+
+            circle.style.top = (wrap_top + radius - y) + 'px';
+
+            circle.style.display = 'block';
+
+            let newCircle = circle.cloneNode(true);
+
+            document.body.appendChild(newCircle);
+
+        };
+
+
+
+    </script>
+</body>
+
+</html>

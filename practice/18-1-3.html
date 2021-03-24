@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="box" style="width: 300px; height: 200px; background-color: #ffa;" onmousemove="mouseIn()"
+        onmouseout="mouseOut()">Hello</div>
+
+    <script>
+        function mouseIn() {
+            document.getElementById('box').style.backgroundColor = '#aa99cc'
+        }
+
+        function mouseOut() {
+            document.getElementById('box').style.backgroundColor = '#0099ee'
+        }
+    </script>
+</body>
+
+</html>

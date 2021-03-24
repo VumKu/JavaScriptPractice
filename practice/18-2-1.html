@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btn" style="width: 200px; height: 30px;">按下改變文字</button>
+    </br></br></br>
+
+    <div id="box" style="width: 100px; height: 100px; background-color: #ffa;">Hello</div>
+    </br></br></br>
+
+    <img class="puppy" src='https://i.pinimg.com/600x315/8d/4c/82/8d4c82be4f898f25a465919698566b57.jpg' alt=''>
+
+
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function (event) {
+            alert(this.innerText);
+            this.innerText = '已改變'
+
+        })
+        // ---------------------------------------
+        // 利用getElementsByTagName來寫
+        let div = document.getElementsByTagName('div')[0]
+
+        div.addEventListener('mousemove', function (event) {
+            this.style.backgroundColor = '#aa77cc'
+        })
+        div.addEventListener('mouseout', function (event) {
+            this.style.backgroundColor = '#0099cc'
+        })
+        // ----------------------------------------
+        // 利用querySelector來寫 _____.querySelector('css-selector') / _____.querySelectorAll('css-selector')[n]
+        // 用css選擇器比較直觀
+        document.querySelector('img.puppy').addEventListener('mousemove', function (event) {
+            this.setAttribute('src', 'https://ballparkdigest.com/wp-content/uploads/2020/02/New-Trenton-Thunder-bat-dog-300x300.jpg')
+        })
+
+    </script>
+</body>
+
+</html>
