@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="myList">
+        <li>item01</li>
+        <li>item02</li>
+        <li>item03</li>
+    </ul>
+
+    <script>
+        var myList = document.getElementById('myList')
+        var oldItem = document.querySelectorAll('li')[1]
+
+        myList.removeChild(oldItem)
+    </script>
+</body>
+
+</html>

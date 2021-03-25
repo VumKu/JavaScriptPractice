@@ -16,11 +16,19 @@
     </ul>
 
     <script>
+        // 定義原有的ul
         var myList = document.getElementById('myList');
+
+        // 建立虛擬的li
         var newList = document.createElement('li')
+
+        // 建立虛擬的文字
         var textNode = document.createTextNode('Hello world!')
 
+        // 把虛擬的文字加入虛擬的li
         newList.appendChild(textNode);
+
+        // 把虛擬的li加入已有的ul裡
         myList.appendChild(newList);
     </script>
 </body>

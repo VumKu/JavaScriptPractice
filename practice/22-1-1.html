@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn01">按鈕01</button>
+    <button id="btn02" name="btn02">按鈕02</button>
+    <button id="btn03" onclick="javascript: alert('btn03');">按鈕03</button>
+
+    <script>
+        // 幫btn01新增name、並讓他不能再按
+        var btn01 = document.querySelectorAll('button')[0]
+        btn01.setAttribute('name', 'btn-1')
+        btn01.setAttribute('disabled', '')
+
+        // 讓btn02取得name的值，然後把該值寫出來
+        var btn02 = document.querySelectorAll('button')[1]
+        var btn2Name = btn02.getAttribute('name')
+        document.write(btn2Name)
+
+        // 移除btn03的onclick屬性
+        var btn03 = document.querySelectorAll('button')[2]
+        btn03.removeAttribute('onclick')
+    </script>
+</body>
+
+</html>
